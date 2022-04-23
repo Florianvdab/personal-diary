@@ -1,8 +1,5 @@
 package com.florianvdab.diary.controllers;
 
-import com.florianvdab.diary.repositories.ActivityRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,16 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/activities")
 public class ActivityController {
 
-    final
-    ActivityRepository activityRepository;
-
-    public ActivityController(ActivityRepository activityRepository) {
-        this.activityRepository = activityRepository;
-    }
-
     @GetMapping("")
     public String displayActivities(Model model) {
-        //TODO
         return "projects/new-project";
     }
 

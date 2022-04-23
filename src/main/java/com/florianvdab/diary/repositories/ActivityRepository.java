@@ -8,7 +8,4 @@ import java.util.List;
 
 @Repository
 public interface ActivityRepository extends CrudRepository<Activity, Long> {
-
-    @Override
-    List<Activity> findAll();
 }
