@@ -2,6 +2,7 @@ package com.florianvdab.diary.controllers;
 
 import com.florianvdab.diary.entities.Activity;
 import com.florianvdab.diary.repositories.ActivityRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,10 +14,10 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/activities")
+@AllArgsConstructor
 public class ActivityController {
 
-    @Autowired
-    ActivityRepository activityRepository;
+    final ActivityRepository activityRepository;
 
     @GetMapping("new")
     public String displayActivities(Model model) {
