@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layouts :: head"></head>
+
+<body>
+<nav th:replace="layouts :: navbar"></nav>
+<div class="container">
+  <form action="/activities/save" th:object="${activity}" method="POST">
+
+    <input type="text" placeholder="Title" th:field="*{title}">
+
+    <input type="number" placeholder="Kcal" th:field="*{kcal}">
+
+    <input type="datetime-local" placeholder="Start time" th:field="*{startDateTime}">
+
+    <input type="datetime-local"  placeholder="End time" th:field="*{endDateTime}">
+
+    <button type="submit">Create Activity</button>
+
+  </form>
+</div>
+
+</body>
+
+</html>
