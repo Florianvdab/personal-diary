@@ -1,38 +1,18 @@
 package com.florianvdab.diary.entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public enum ExerciseType {
-    WALK, HIKE, WORK_OUT, SWIM, RUN, BIKE, HOME_TRAINER;
+    WALK("Walk"),
+    HIKE("Hike"),
+    WORK_OUT("Work-out"),
+    SWIM("Swim"),
+    RUN("Run"),
+    BIKE("Bike"),
+    HOME_TRAINER("Home Trainer");
 
-    public String getText() {
-        switch (this) {
-            case WALK -> {
-                return "Walk";
-            }
-            case HIKE -> {
-                return "Hike";
-            }
-            case WORK_OUT -> {
-                return "Work-out";
-            }
-            case SWIM -> {
-                return "Swim";
-            }
-            case RUN -> {
-                return "Run";
-            }
-            case BIKE -> {
-                return "Bike";
-            }
-            case HOME_TRAINER -> {
-                return "Home Trainer";
-            }
-
-        }
-        return "";
-    }
-
-    @Override
-    public String toString() {
-        return getText();
-    }
+    private final String displayValue;
 }

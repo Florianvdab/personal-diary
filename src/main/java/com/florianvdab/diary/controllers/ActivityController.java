@@ -30,7 +30,7 @@ public class ActivityController {
     public String saveEmployeeForm(Activity activity, Model model) {
         activityRepository.save(activity);
 
-        return "redirect:/";
+        return "redirect:/activities";
     }
 
     @GetMapping("")

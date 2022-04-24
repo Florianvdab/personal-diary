@@ -7,19 +7,26 @@
 <body>
 <nav th:replace="layouts :: navbar"></nav>
 <div class="container">
-  <form action="/activities/save" th:object="${activity}" method="POST">
+    <form action="/activities/save" method="POST" th:object="${activity}">
 
-    <input type="text" placeholder="Title" th:field="*{title}">
+        <input placeholder="Title" th:field="*{title}" type="text">
 
-    <input type="number" placeholder="Kcal" th:field="*{kcal}">
+        <input placeholder="Kcal" th:field="*{kcal}" type="number">
 
-    <input type="datetime-local" placeholder="Start time" th:field="*{startDateTime}">
+        <select name="color" th:field="*{type}">
+            <option th:each="type : ${T(com.florianvdab.diary.entities.ExerciseType).values()}"
+                    th:text="${type}"
+                    th:value="${type}">
+            </option>
+        </select>
 
-    <input type="datetime-local"  placeholder="End time" th:field="*{endDateTime}">
+        <input placeholder="Start time" th:field="*{startDateTime}" type="datetime-local">
 
-    <button type="submit">Create Activity</button>
+        <input placeholder="End time" th:field="*{endDateTime}" type="datetime-local">
 
-  </form>
+        <button type="submit">Create Activity</button>
+
+    </form>
 </div>
 
 </body>

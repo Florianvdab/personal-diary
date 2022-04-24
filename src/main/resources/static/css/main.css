@@ -1,7 +1,14 @@
 body {
-    font-family: "OCR A Extended", Helvetica, sans-serif;
+    font-family: Test, Arial, sans-serif;
+    color: white;
+    background-image: url("https://preview.redd.it/mkqt4061ueg11.jpg?width=5120&format=pjpg&auto=webp&s=230b3a3311d3d1acac10cb7bdcbd30858b05ac40");
 }
 
 @font-face {
-    font-family: "OCR A Extended";
+    font-family: Test;
+    src: url("../fonts/ocr-a-bt.ttf");
+}
+
+.table{
+    color:white !important;
 }
