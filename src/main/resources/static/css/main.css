@@ -9,6 +9,15 @@ body {
     src: url("../fonts/ocr-a-bt.ttf");
 }
 
-.table{
-    color:white !important;
+.table {
+    color: white !important;
+}
+
+.activity-title {
+    display: flex;
+    justify-content: center;
+}
+
+hr {
+    border-top: 1px solid white;
 }
