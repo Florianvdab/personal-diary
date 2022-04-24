@@ -21,3 +21,26 @@ body {
 hr {
     border-top: 1px solid white;
 }
+
+@media (min-width: 768px) {
+    .navbar-centered .navbar-nav {
+        float: none;
+        text-align: center;
+    }
+
+    .navbar-centered .navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-centered .nav > li {
+        display: inline;
+    }
+
+    .navbar-centered .nav > li > a {
+        display: inline-block;
+    }
+}
+
+.custom-bg {
+    background-color: #303030;
+}
